@@ -21,9 +21,7 @@ function countChar(stringToTest, charToFind) {
       count += 1;
     }
   }
-  return alert(
-    `There are ${count} ${charToFind}'s' in: ${stringToTest}`
-  );
+  return alert(`There are ${count} ${charToFind}'s' in: ${stringToTest}`);
 }
 
 countChar(prompt("Enter a String:"), prompt("What Char Should I count??"));
