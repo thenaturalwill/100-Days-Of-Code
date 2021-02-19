@@ -2,4 +2,4 @@
 These are my solutions to the exercises listed in Eloquent JavaScript SE
 
 
-https://eloquentjavascript.net/
+https://eloquentjavascript.net/2nd_edition/
