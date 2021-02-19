@@ -1,20 +1,4 @@
-/*
-Write a function that counts all of the B's in a string
-Then rewrite it to count a giving char on input.
-*/
-
-function countBs(toTest) {
-  let count = 0;
-  for (var i = 0; i < toTest.length; i++) {
-    if (toTest.charAt([i]) == "B") {
-      count += 1;
-    }
-  }
-  return count;
-}
-console.log(countBs("Bahh Bahh Black Sheep"));
-
-// Logic to search and Input Field to find Givin Text
+// Logic to search a text field for the supplied char or word phrase.
 function countChar(stringToTest, charToFind) {
   let count = 0;
   let string = document.getElementById(stringToTest).value;
@@ -27,16 +11,24 @@ function countChar(stringToTest, charToFind) {
       }
     }
   }
-  // This is working, but it will not check for punctuation marks yet :(
+  // Phrase the search term to look for unsupported  chars
   else if (char.length >= 2) {
-    stringArrary = string.split(" ");
-    console.log(stringArrary.length);
-    console.log(stringArrary);
-    for (var i = 0; i <= stringArrary.length; i++) {
-      if (stringArrary[i] == char) {
-        count += 1;
+    let ignore = " .!?&%$#@^*()_-+={}[]:;><.,/\\'\"";
+    let stringArrary = string.split(" ");
+    try {
+      for (var i = 0; i <= stringArrary.length; i++) {
+        let s = stringArrary[i].length;
+        // Test the last char of the word to see if it should be ignored
+        for (var x = 0; x <= ignore.length; x++) {
+          if (stringArrary[i][s - 1] == ignore.charAt([x])) {
+            stringArrary[i] = stringArrary[i].substring(0, s - 1);
+          }
+        }
+        if (stringArrary[i] == char) {
+          count += 1;
+        }
       }
-    }
+    } catch {}
   } else {
     return alert("Please enter at least ONE character to search for.");
   }
