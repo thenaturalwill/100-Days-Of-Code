@@ -29,19 +29,16 @@ For any Number N, Its Evenness is the same as N-2
 
 */
 
-function isEven(number) {
-  function calculate(testValue) {
-    if (testValue == 0) {
-      return "Even";
-    } else if (testValue == 1) {
-      return "Odd";
-    } else if (testValue < 0) {
-      return calculate(testValue * -1);
-    } else {
-      return calculate(testValue - 2);
-    }
+function isEven(testValue) {
+  if (testValue == 0) {
+    return "Even";
+  } else if (testValue == 1) {
+    return "Odd";
+  } else if (testValue < 0) {
+    return isEven(testValue * -1);
+  } else {
+    return isEven(testValue - 2);
   }
-  return calculate(number - 2);
 }
 
 console.log("The Number is: " + isEven(50));
