@@ -58,3 +58,13 @@ h1 {
 .inputB:hover {
   background-color: lawngreen;
 }
+
+.output-box {
+  display: none;
+  box-sizing: border-box;
+  font-size: 1rem;
+  margin: 1rem auto;
+  padding: 1rem;
+  width: 40rem;
+  border: 1px solid black;
+}
