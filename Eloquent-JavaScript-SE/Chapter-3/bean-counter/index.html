@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+  <body>
+    <h1>Text Search</h1>
+    <div class="container">
+      <h3>Paste your text below</h3>
+      <textarea id="stringToTest"></textarea>
+      <label for="text">Search For: </label>
+      <input type="text" name="text" id="text" />
+      <input
+        class="inputB"
+        type="button"
+        onclick="countChar('stringToTest', 'text')"
+        value="RUN"
+      />
+    </div>
+    <script src="counter.js"></script>
+  </body>
+</html>
