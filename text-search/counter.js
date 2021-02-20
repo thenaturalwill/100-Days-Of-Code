@@ -1,5 +1,5 @@
 // Logic to search a text field for the supplied char or word phrase.
-function countChar(stringToTest, charToFind) {
+function textSearch(stringToTest, charToFind) {
   let count = 0;
   let string = document.getElementById(stringToTest).value;
   let char = document.getElementById(charToFind).value;
