@@ -1,5 +1,3 @@
-# Eloquent-JS-SE-Solutions
-These are my solutions to the exercises listed in Eloquent JavaScript SE
+This is my journy into JavaScript, join me as I take on the 100days of code challenge!
 
-
-https://eloquentjavascript.net/2nd_edition/
+I plan to post projects that I start, as well as, excercieses from books that I am reading
