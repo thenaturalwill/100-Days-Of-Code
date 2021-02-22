@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+
+html {
+  font-size: 10px;
+  font-family: "Rubik", sans-serif;
+}
+body {
+  background: aliceblue;
+  display: grid;
+  place-items: center;
+  margin: 0;
+}
+.calculator {
+  box-sizing: border-box;
+  background-color: whitesmoke;
+  margin: 4rem auto 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  width: 55rem;
+  border-radius: 0.5rem;
+  box-shadow: 0.1rem 0.2rem 0.4rem 0.1rem grey;
+}
+
+/* Calculator Head */
+.calc-head {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 3rem;
+}
+.calc-head h1 {
+  border-radius: 5rem;
+  color: whitesmoke;
+  background-color: cornflowerblue;
+  padding: 0.7rem 2.2rem;
+  margin-top: 1.7rem;
+  text-shadow: 0 0 1rem grey;
+  font-weight: 600;
+}
+.fa-phabricator {
+  margin-top: 2.2rem;
+  font-size: 2.75rem;
+  color: grey;
+}
+.fa-phabricator:hover {
+  color: black;
+}
+
+/* Calculator Output Display */
+.calc-display {
+  background-color: rgba(206, 197, 197, 0.301);
+  height: 20rem;
+}
+.calc-display h3 {
+  color: rgb(110, 109, 109);
+  font-size: 2rem;
+  margin-right: 3rem;
+  float: right;
+}
+
+/* Calculator Buttons  */
+.calc-body {
+  height: 55rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 2rem 3rem;
+  grid-gap: 2rem;
+}
+.calc-body div {
+  text-align: center;
+  font-size: 5rem;
+  padding: 1.6rem 0 0;
+  border-radius: 5rem;
+  border: 2.5px solid ghostwhite;
+}
+.calc-body div:hover {
+  border: 2.5px solid grey;
+}
+.button-s-1 {
+  background-color: rgba(206, 197, 197, 0.678);
+  text-shadow: 0.2rem 0.1rem 0.2rem lightgrey;
+  color: aliceblue;
+}
+.button-s-2 {
+  color: rgb(107, 106, 106);
+}
+.button-s-3 {
+  background-color: rgba(173, 216, 230, 0.966);
+  text-shadow: 0.2rem 0.1rem 0.2rem lightgrey;
+  color: aliceblue;
+}
+.button-s-4 {
+  background-color: rgba(100, 148, 237, 0.801);
+  text-shadow: 0.2rem 0.1rem 0.2rem lightgrey;
+  color: aliceblue;
+}
