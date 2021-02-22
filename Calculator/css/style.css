@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
 
 html {
-  font-size: 10px;
+  font-size: 8.5px;
   font-family: "Rubik", sans-serif;
 }
 body {
@@ -13,7 +13,7 @@ body {
 .calculator {
   box-sizing: border-box;
   background-color: whitesmoke;
-  margin: 4rem auto 0;
+  margin: 10rem auto 0;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -30,6 +30,7 @@ body {
   padding: 0 3rem;
 }
 .calc-head h1 {
+  box-shadow: 0rem 0rem 0.3rem grey;
   border-radius: 5rem;
   color: whitesmoke;
   background-color: cornflowerblue;
@@ -37,6 +38,9 @@ body {
   margin-top: 1.7rem;
   text-shadow: 0 0 1rem grey;
   font-weight: 600;
+}
+.calc-head h1:hover {
+  background-color: hotpink;
 }
 .fa-phabricator {
   margin-top: 2.2rem;
@@ -49,16 +53,26 @@ body {
 
 /* Calculator Output Display */
 .calc-display {
+  box-shadow: 0rem 0rem 0.2rem grey;
   background-color: rgba(206, 197, 197, 0.301);
   height: 20rem;
+  display: block;
 }
-.calc-display h3 {
+#Numbers-Inputed {
   color: rgb(110, 109, 109);
-  font-size: 2rem;
-  margin-right: 3rem;
-  float: right;
+  padding: 0 3rem;
+  font-size: 2.5rem;
+  position: absolute;
+  top: 9rem;
+  right: 1rem;
 }
-
+#Total-Calc {
+  color: rgb(110, 109, 109);
+  font-size: 7rem;
+  position: absolute;
+  top: 17.5rem;
+  right: 5rem;
+}
 /* Calculator Buttons  */
 .calc-body {
   height: 55rem;
@@ -68,30 +82,32 @@ body {
   grid-gap: 2rem;
 }
 .calc-body div {
-  text-align: center;
   font-size: 5rem;
-  padding: 1.6rem 0 0;
+  text-align: center;
+  padding: 1.4rem 0 0;
   border-radius: 5rem;
-  border: 2.5px solid ghostwhite;
+  text-shadow: 0.2rem 0.1rem 0.5rem grey;
+  box-shadow: 0.1rem 0.1rem 0.5rem grey;
 }
 .calc-body div:hover {
   border: 2.5px solid grey;
 }
 .button-s-1 {
+  border: 2.5px solid rgba(206, 197, 197, 0.678);
   background-color: rgba(206, 197, 197, 0.678);
-  text-shadow: 0.2rem 0.1rem 0.2rem lightgrey;
   color: aliceblue;
 }
 .button-s-2 {
+  border: 2.5px solid whitesmoke;
   color: rgb(107, 106, 106);
 }
 .button-s-3 {
+  border: 2.5px solid rgba(173, 216, 230, 0.966);
   background-color: rgba(173, 216, 230, 0.966);
-  text-shadow: 0.2rem 0.1rem 0.2rem lightgrey;
   color: aliceblue;
 }
 .button-s-4 {
+  border: 2.5px solid rgba(100, 148, 237, 0.801);
   background-color: rgba(100, 148, 237, 0.801);
-  text-shadow: 0.2rem 0.1rem 0.2rem lightgrey;
   color: aliceblue;
 }
