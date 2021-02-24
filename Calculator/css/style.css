@@ -58,27 +58,27 @@ body {
   height: 20rem;
   display: block;
 }
-#Numbers-Inputed {
+#running_total {
   color: rgb(110, 109, 109);
   padding: 0 3rem;
-  font-size: 2.5rem;
+  font-size: 3rem;
   position: absolute;
-  top: 9rem;
-  right: 1rem;
+  top: 11rem;
+  right: 0.7rem;
 }
-#Total-Calc {
+#total_calculated {
   color: rgb(110, 109, 109);
-  font-size: 7rem;
+  font-size: 8rem;
   position: absolute;
-  top: 17.5rem;
-  right: 5rem;
+  top: 16rem;
+  right: 7rem;
 }
 /* Calculator Buttons  */
 .calc-body {
   height: 55rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin: 2rem 3rem;
+  margin: 4rem;
   grid-gap: 2rem;
 }
 .calc-body div {
@@ -86,15 +86,14 @@ body {
   text-align: center;
   padding: 1.4rem 0 0;
   border-radius: 5rem;
-  text-shadow: 0.2rem 0.1rem 0.5rem grey;
   box-shadow: 0.1rem 0.1rem 0.5rem grey;
 }
 .calc-body div:hover {
   border: 2.5px solid grey;
 }
 .button-s-1 {
-  border: 2.5px solid rgba(206, 197, 197, 0.678);
-  background-color: rgba(206, 197, 197, 0.678);
+  border: 2.5px solid rgb(204, 204, 204);
+  background-color: rgb(204, 204, 204);
   color: aliceblue;
 }
 .button-s-2 {
@@ -102,12 +101,12 @@ body {
   color: rgb(107, 106, 106);
 }
 .button-s-3 {
-  border: 2.5px solid rgba(173, 216, 230, 0.966);
-  background-color: rgba(173, 216, 230, 0.966);
+  border: 2.5px solid rgba(173, 216, 230);
+  background-color: rgba(173, 216, 230);
   color: aliceblue;
 }
 .button-s-4 {
-  border: 2.5px solid rgba(100, 148, 237, 0.801);
-  background-color: rgba(100, 148, 237, 0.801);
+  border: 2.5px solid rgb(100, 148, 237);
+  background-color: rgb(100, 148, 237);
   color: aliceblue;
 }
