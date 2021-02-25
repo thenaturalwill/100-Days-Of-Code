@@ -1,0 +1,161 @@
+// Pluralsight - JavaScript Module Fundamentals by Brice Wilson - Notes
+
+--- What is a Module? ---
+A group of code and data related to a particular piece of functionality. It encapsulates
+implementation details, exposes a public API and is combined with other modules to build
+a larger application. 
+
+--- Goals of Modularity ---
+1. Define higher-level abstractions - think about chunks of information at a time, break it down.
+
+2. Encapsulation - Define a clear API for users, but hide the implementation details form the user.
+
+3. Reusability - Write something that can be reused in different parts of an appliction.
+
+4. Simplify Dependency Management - Declare all of the other modules that are required for that 
+module to work from with inside the module being used.
+
+-------- Module Patterns in ES5 -------
+
+--- Reducing Global Scope Pollution ---
+IIFE = Immediately Invoked Function Expression
+    1. Anonymous function that are invoked when they are decaled.
+    2. Provide Encapsulation by nesting your implementation logic.
+    3. Not callable by other code, stoping conflics with dependencies.
+    4. Lack dependency management.
+
+--- Example of IIFE that provides Initilization ---
+(function() {
+    console.log('Starting MultiMath with an IIFE;);
+
+    // add click handler to the start game button
+    document.getElementById('startGame').addEventListener('click', function() {
+        player.setName(document.getElementById('playerName').value);
+    });
+
+    // add click handler to the calculate score button
+    document.getElementById('calculate').addEventListener('click', function() {
+        game.calculateScore();
+    });
+
+    // set the default number of problems
+    document.getElementById('problemCount').value = game.getProblemCount();
+
+})();
+
+// (function(){ }) = Function Expression
+// (); = Immediately Invokes Function
+// IIFE's can be assigned paramiters who's data is passed to them in the invoker - ('data');
+
+--- Revealing Module Patterns ---
+    1. RMP takes advantage of the fact that Variables are Scoped to functions in JavaScript.
+    2. Function Scoping provides Encapsulation.
+    3. Adds a value to the global scope per module, because they do need a name assigned.
+    4. Clear delineation between private implementation and public API.
+    5. Does not provide any dependency management.
+    6. Pure JavaScript that works in modern browsers.
+
+Can be Implented as:
+    Singleton - Exactly one instance of the modual available to the entire app.
+    Constructor Function - Create as many instances as need, when needed.
+
+--- RMP as Singleton ---
+
+var scoreboard = function() {
+    var message = 'Welcome to the Game!';
+
+    function printMessage() {
+        console.log(message);
+    }
+
+    return {
+        showMessage: printMessage
+    }
+
+}();
+
+// RMP's should return a function that represents your new module
+// Includeing properties that map to functions declared in the private portion
+   of the modual declaration. 
+
+// (); auto assignes the showMessage object to the scoreboard variable ie - scoreboard.showMessage 
+
+--- Example of RMP Singletons with Initilization---
+
+
+--player.js
+var player = function() {
+    
+    // private members
+    var playerName = '';
+
+    function logPlayer() {
+        console.log('The current Player is ' + playerName + '.');
+    }
+    function setName(newName) {
+        playerName = newName;
+    }
+    function getName() {
+        return playerName;
+    }
+    return {
+        logPlayer: logPlayer,
+        setName: setName,
+        getName: getName
+    };
+}();
+
+--scoreboard.js 
+var scoreboard = function() {
+
+    //private members
+    var resaults = [];
+
+    function addResult(newResult) {
+        results.push(newResult);
+    }
+    function updateScoreboard() {
+        var output = '<h2>Scoreboard</h2>';
+
+        //loop over all results and create the html for the scoreboard
+        for (var index = o; index < results.lenght; index++) {
+            var result = results[index];
+            output += '<h4>';
+            output += result.name + ': ' + result.score + '/' + result.problems + ' for factor';
+            output += '</h4>';
+        }
+
+        // add the updated scoreboard to the page 
+        var scoresElement = document.getElementById('scores');
+        scoresElement.innerHTML = output;
+    }
+
+    // return public members  -- expose the api
+    return {
+        addresult: addResult;
+        updateScoreboard: updateScoreboard
+    }
+}();
+
+ect...
+
+- make sure each js file is referenced in HTML in the order that they will be invoked and not after a file that will
+envoke a function from a particular file. Since RMP does not support dependencies.
+
+ --- Using Constructor Functions instead of Singletons ---
+
+ --scoreboard.js 
+var Scoreboard = function() {
+    var message = 'Welcome to the game!';
+    
+    function printMessage() {
+        console.log(message);
+    }
+    return {
+        showMessage: printMessage
+    }
+};
+var myScoreboard = new Scoreboard();
+myScoreboard.showMessage();
+
+// Capitalize the variable assigned to the Constructor Function for convention
