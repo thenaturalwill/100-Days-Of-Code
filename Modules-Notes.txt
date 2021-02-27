@@ -45,6 +45,7 @@ IIFE = Immediately Invoked Function Expression
 
 // (function(){ }) = Function Expression
 // (); = Immediately Invokes Function
+
 // IIFE's can be assigned paramiters who's data is passed to them in the invoker - ('data');
 
 --- Revealing Module Patterns ---
@@ -81,7 +82,6 @@ var scoreboard = function() {
 // (); auto assignes the showMessage object to the scoreboard variable ie - scoreboard.showMessage 
 
 --- Example of RMP Singletons with Initilization---
-
 
 --player.js
 var player = function() {
@@ -137,10 +137,9 @@ var scoreboard = function() {
     }
 }();
 
-ect...
-
 - make sure each js file is referenced in HTML in the order that they will be invoked and not after a file that will
 envoke a function from a particular file. Since RMP does not support dependencies.
+
 
  --- Using Constructor Functions instead of Singletons ---
 
@@ -155,6 +154,8 @@ var Scoreboard = function() {
         showMessage: printMessage
     }
 };
+
+// excicute the function by calling it later in another module
 var myScoreboard = new Scoreboard();
 myScoreboard.showMessage();
 

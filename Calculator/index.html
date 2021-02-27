@@ -31,8 +31,8 @@
         ondragstart="return false"
         onselectstart="return false"
       >
-        <div class="button-s-1" onclick="autoclear();">AC</div>
-        <div class="button-s-1" onclick="clear();">C</div>
+        <div class="button-s-1" onclick="clearCalc('AC');">AC</div>
+        <div class="button-s-1" onclick="clearCalc('C');">C</div>
         <div class="button-s-1" onclick="sign();">+/-</div>
         <div class="button-s-1" onclick="buttonPress('%');">%</div>
         <div class="button-s-2" onclick="buttonPress('7');">7</div>
@@ -49,10 +49,13 @@
         <div class="button-s-3" onclick="buttonPress('-');">-</div>
         <div class="button-s-2" onclick="buttonPress('0');">0</div>
         <div class="button-s-2" onclick="buttonPress('.');">.</div>
-        <div class="button-s-4" onclick="calculate();">=</div>
+        <div class="button-s-4" onclick="buttonPress('=');">=</div>
         <div class="button-s-3" onclick="buttonPress('+');">+</div>
       </div>
     </div>
-    <script src="js/calculate.js"></script>
+    <script type="text/javascript" src="js/rendering.js"></script>
+    <script type="text/javascript" src="js/calculate.js"></script>
+    <script type="text/javascript" src="js/buttons.js"></script>
+    <script type="text/javascript" src="js/keyboard-events.js"></script>
   </body>
 </html>
