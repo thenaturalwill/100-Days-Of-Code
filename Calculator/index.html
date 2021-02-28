@@ -10,16 +10,17 @@
     ></script>
   </head>
   <body>
-    <div class="calculator">
+    <div class="calculator" id="calculator">
       <div class="calc-head">
         <h1
           onclick="openCalc();"
           ondragstart="return false"
           onselectstart="return false"
+          id="calc-open"
         >
           Calculator
         </h1>
-        <i class="fab fa-phabricator"></i>
+        <i class="fab fa-phabricator" onclick="darkMode();" id="toggle"></i>
       </div>
       <div class="calc-display" id="calc-display">
         <div id="running_total"></div>

@@ -29,7 +29,7 @@ body {
   justify-content: space-between;
   padding: 0 3rem;
 }
-.calc-head h1 {
+#calc-open {
   box-shadow: 0rem 0rem 0.3rem grey;
   border-radius: 5rem;
   color: whitesmoke;
@@ -39,15 +39,15 @@ body {
   text-shadow: 0 0 1rem grey;
   font-weight: 600;
 }
-.calc-head h1:hover {
+.calc-open:hover {
   background-color: hotpink;
 }
-.fa-phabricator {
+#toggle {
   margin-top: 2.2rem;
   font-size: 2.75rem;
   color: grey;
 }
-.fa-phabricator:hover {
+#toggle:hover {
   color: black;
 }
 
@@ -92,12 +92,13 @@ body {
   border: 2.5px solid grey;
 }
 .button-s-1 {
-  border: 2.5px solid rgb(204, 204, 204);
+  border: 2.5px solid rgba(204, 204, 204);
   background-color: rgb(204, 204, 204);
   color: aliceblue;
 }
 .button-s-2 {
   border: 2.5px solid whitesmoke;
+  background-color: whitesmoke;
   color: rgb(107, 106, 106);
 }
 .button-s-3 {
