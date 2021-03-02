@@ -1,5 +1,5 @@
-let runningTotalDisplay = document.getElementById("running_total");
-let totalDisplay = document.getElementById("total_calculated");
+let runningTotalDisplay = document.getElementById("running-total");
+let totalDisplay = document.getElementById("total-calculated");
 let toDisplayCalc = true;
 let darkMODE = false;
 
