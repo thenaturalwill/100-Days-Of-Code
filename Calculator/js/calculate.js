@@ -1,7 +1,7 @@
 // Work - In Progress
 // Scope is to create a working Calculator with HTML-CSS-JS
-let runningTotal = 0;
 let total = 0;
+let runningTotal = [];
 
 //Calculations
 function calculate() {
