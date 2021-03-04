@@ -1,0 +1,103 @@
+html {
+  font-size: 10px;
+}
+body {
+  display: grid;
+  place-items: center;
+  margin: 0;
+  background-color: antiquewhite;
+}
+h1 {
+  font-family: monospace;
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: antiquewhite;
+  background-color: black;
+  padding: 1rem 34rem;
+  margin-bottom: 1rem;
+}
+
+.container {
+  border: 5px solid black;
+  width: 80rem;
+  height: 60rem;
+  perspective: 250px;
+}
+
+.square-1 {
+  box-sizing: border-box;
+  position: absolute;
+  top: 25rem;
+  left: 30rem;
+  width: 20rem;
+  height: 20rem;
+  background: rgb(102, 102, 102);
+  background: linear-gradient(
+    320deg,
+    rgb(75, 0, 73, 0.2) 0%,
+    rgb(125, 0, 0, 0.1) 100%
+  );
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  z-index: 1;
+  transform-style: preserve-3d;
+}
+
+.square-2 {
+  box-sizing: border-box;
+  position: absolute;
+  top: 19.4rem;
+  left: 24rem;
+  width: 20rem;
+  height: 5.6rem;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    190deg,
+    rgb(75, 0, 73, 0.2) 0%,
+    rgb(125, 0, 0, 0.1) 100%
+  );
+  border-right: 4px solid black;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  transform-style: preserve-3d;
+  transform: skewX(65deg);
+}
+.square-3 {
+  box-sizing: border-box;
+  position: absolute;
+  top: 22.2rem;
+  left: 18em;
+  width: 12rem;
+  height: 20rem;
+  background: linear-gradient(
+    50deg,
+    rgb(75, 0, 73, 0.19) 0%,
+    rgb(125, 0, 0, 0.1) 100%
+  );
+  border: 2px solid black;
+  transform-style: preserve-3d;
+  transform: skewY(25deg);
+}
+.square-4 {
+  box-sizing: border-box;
+  position: absolute;
+  top: 19.45rem;
+  left: 18rem;
+  border-bottom: 2px dashed grey;
+  border-right: 2px dashed grey;
+  z-index: -1;
+  width: 20rem;
+  height: 20rem;
+}
+.square-5 {
+  box-sizing: border-box;
+  position: absolute;
+  top: 22.2rem;
+  left: 38em;
+  width: 12rem;
+  height: 20rem;
+  border-bottom: 2px dashed grey;
+
+  transform-style: preserve-3d;
+  transform: skewY(25deg);
+}
