@@ -1,0 +1,105 @@
+html {
+  font-size: 15px;
+}
+body {
+  background-color: rgba(100, 218, 159);
+  display: grid;
+  place-content: center;
+}
+
+.container {
+  margin-top: 10rem;
+  width: 50rem;
+  height: 50rem;
+}
+
+.circle {
+  box-sizing: border-box;
+  position: relative;
+  border: 1.5rem solid black;
+  background-color: transparent;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+.triangle-outline {
+  position: relative;
+  background-color: black;
+  top: -50rem;
+  left: 5rem;
+  width: 40rem;
+  height: 40rem;
+  z-index: -5;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+.triangle-body {
+  position: relative;
+  background-color: rgba(100, 218, 159);
+  top: -86.8rem;
+  left: 7.5rem;
+  width: 35rem;
+  height: 35rem;
+  z-index: -2;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+.line-1 {
+  position: relative;
+  background-color: black;
+  top: -92.8rem;
+  left: -7rem;
+  width: 35rem;
+  height: 1.5rem;
+  z-index: -1;
+  transform: rotate(60deg);
+}
+.line-1::before {
+  content: "";
+  position: absolute;
+  background-color: black;
+  top: -19rem;
+  left: -15.4rem;
+  width: 41rem;
+  height: 1.5rem;
+  transform: rotate(102deg);
+}
+.line-1::after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  top: -24rem;
+  left: 3.5rem;
+  width: 43rem;
+  height: 1.5rem;
+  transform: rotate(43deg);
+}
+
+.line-2 {
+  position: relative;
+  background-color: black;
+  top: -94.2rem;
+  left: 22rem;
+  width: 35rem;
+  height: 1.5rem;
+  z-index: -1;
+  transform: rotate(-60deg);
+}
+.line-2::before {
+  content: "";
+  position: absolute;
+  background-color: black;
+  top: -19rem;
+  left: 9.5rem;
+  width: 41rem;
+  height: 1.5rem;
+  transform: rotate(-102deg);
+}
+.line-2::after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  top: -24rem;
+  left: -11.5rem;
+  width: 43rem;
+  height: 1.5rem;
+  transform: rotate(-43deg);
+}
