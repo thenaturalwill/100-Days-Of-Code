@@ -1,0 +1,52 @@
+html {
+  font-size: 10px;
+}
+body {
+  display: grid;
+  place-items: center;
+  background-color: #d198f9;
+}
+.container {
+  margin-top: 10rem;
+  box-sizing: border-box;
+  border: 1px solid black;
+  width: 50rem;
+  height: 80rem;
+}
+.square-1 {
+  position: relative;
+  top: 25rem;
+  left: 10rem;
+  background-color: rgba(255, 255, 255, 0.486);
+  width: 30rem;
+  height: 55rem;
+  transform: perspective(45em) rotateX(-15deg);
+}
+.square-2 {
+  position: relative;
+  left: 7rem;
+  top: -35.25rem;
+  background-color: rgb(180, 223, 213);
+  width: 36rem;
+  height: 3.3rem;
+}
+.square-2::before {
+  content: "";
+  position: absolute;
+  left: -1.5rem;
+  top: -0.1rem;
+  background-color: rgb(180, 223, 213);
+  border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+}
+.square-2::after {
+  content: "";
+  position: absolute;
+  left: 34rem;
+  top: -0.1rem;
+  background-color: rgb(180, 223, 213);
+  border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+}
