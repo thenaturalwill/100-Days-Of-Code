@@ -1,29 +1,49 @@
 /* CODED BY: WILL S. -- HTTP://THENATURALWILL.COM */
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
 
 html {
   box-sizing: border-box;
   font-size: 10px;
   font-family: "Roboto", sans-serif;
+  background-image: url("/desktop/img/cyber.jpg");
+  background-position: center;
+  background-repeat: repeat-x;
+
   overflow: hidden;
 }
 body {
   display: flex;
   flex-direction: row;
 }
-
 /* DESKTOP FRAME WORK */
 .desktop {
   box-sizing: border-box;
   position: absolute;
   left: 0;
   top: 0;
-  background: grey;
   margin: 0;
   width: 100vw;
   height: 95vh;
 }
+#logo {
+  font-family: "DotGothic16", sans-serif;
+  margin: 33vh auto;
+  color: rgb(49, 236, 180);
+  line-height: 2rem;
+  font-weight: 800;
+  font-size: 2rem;
+  text-shadow: 1rem 0.1rem 1rem blueviolet;
+}
+#logo h1 {
+  margin-top: 0;
+  padding-left: 38rem;
+  font-size: 5rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
 /* DESKTOP ICONS */
 .icon-grid {
   box-sizing: border-box;
@@ -48,7 +68,7 @@ body {
   box-sizing: border-box;
   border: whitesmoke 0.1rem solid;
   color: whitesmoke;
-  background-color: teal;
+  background-color: blueviolet;
   font-size: 1rem;
   margin: 1rem 1rem 0.75rem 1rem;
   padding: 1rem;
@@ -71,6 +91,7 @@ body {
   background-color: lightpink;
   width: 20rem;
   height: 20rem;
+  display: none;
 }
 .sticky-1::before {
   content: "";
@@ -111,13 +132,13 @@ body {
   z-index: 1;
 }
 /* START BAR */
-.start h1 {
+.start h2 {
   margin: 0.5rem;
   padding: 1rem;
   font-size: 1.8rem;
   font-weight: 900;
 }
-.start h1:hover {
+.start h2:hover {
   background-color: grey;
 }
 /* APPLICTION WINDOWS */
