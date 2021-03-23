@@ -1,0 +1,67 @@
+html {
+  background-color: pink;
+  font-size: 10px;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 15rem 60rem 10rem;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas:
+    "header header header"
+    "mc-griddle mc-griddle aside"
+    "footer footer footer";
+  grid-gap: 1.5rem;
+  padding: 1rem;
+}
+.container div {
+  border: 0.1rem solid black;
+}
+.header {
+  background-color: powderblue;
+  grid-area: header;
+}
+.aside {
+  background-color: rebeccapurple;
+  grid-area: aside;
+}
+.mc-griddle {
+  background-color: salmon;
+  grid-area: mc-griddle;
+}
+.footer {
+  background-color: seagreen;
+  grid-area: footer;
+}
+
+.griddle {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 28rem 28rem;
+  grid-template-areas: "one two" "three four";
+  grid-gap: 1.5rem;
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+}
+.one {
+  grid-area: one;
+  width: 100%;
+  background-color: black;
+}
+.two {
+  grid-area: two;
+  width: 100%;
+  background-color: silver;
+}
+.three {
+  grid-area: three;
+  width: 100%;
+  background-color: silver;
+}
+.four {
+  grid-area: four;
+  width: 100%;
+  background-color: black;
+}
