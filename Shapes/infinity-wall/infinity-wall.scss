@@ -1,32 +1,38 @@
+$line-color: black;
+$background-color: rgb(243, 190, 245);
+$tunnel-color: rgba(89, 240, 190, 0.904);
+$tunnel-end-color: rgb(0, 0, 0);
+
 html {
   display: grid;
   place-content: center;
-  background-color: rgba(196, 75, 200, 0.966);
+  background-color: $background-color;
   font-size: 10px;
   width: 100%;
   height: 100%;
 }
 
-.tunnle-wrapper {
-  background-color: hsla(175, 87%, 63%, 0.904);
+// Squares that make up the tunnel
+.tunnel-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 79rem;
-  height: 79rem;
+  width: 78rem;
+  height: 78rem;
 }
 .s-1 {
   position: absolute;
   top: 42.5rem;
-  background-color: antiquewhite;
-  border: .2rem solid black;
+  background-color: $tunnel-end-color;
+  box-shadow: 0 0 5rem 2rem $tunnel-end-color;
+  border: .2rem solid $line-color;
   width: 8rem;
   height: 8rem;
   z-index: 2;
 
   &:before {
     position: absolute;
-    border: .2rem solid black;
+    border: .2rem solid $line-color;
     content: '';
     top: -2.5rem;
     left: -2.5rem;
@@ -35,7 +41,7 @@ html {
   }
   &:after {
     position: absolute;
-    border: .2rem solid black;
+    border: .2rem solid $line-color;
     content: '';
     top: -5.5rem;
     left: -5.5rem;
@@ -46,13 +52,13 @@ html {
 .s-2 {
   position: absolute;
   top: 34rem;
-  border: .2rem solid black;
+  border: .2rem solid $line-color;
   width: 25rem;
   height: 25rem;
 
   &:before {
     position: absolute;
-    border: .2rem solid black;
+    border: .2rem solid $line-color;
     content: '';
     top: -4rem;
     left: -3.7rem;
@@ -61,7 +67,7 @@ html {
   }
   &:after {
     position: absolute;
-    border: .4rem solid black;
+    border: .4rem solid $line-color;
     content: '';
     top: -7.5rem;
     left: -7.5rem;
@@ -72,13 +78,13 @@ html {
 .s-3 {
   position: absolute;
   top: 23rem;
-  border: .4rem solid black;
+  border: .4rem solid $line-color;
   width: 46rem;
   height: 46rem;
 
   &:before {
     position: absolute;
-    border: .4rem solid black;
+    border: .4rem solid $line-color;
     content: '';
     top: -4rem;
     left: -4rem;
@@ -87,7 +93,7 @@ html {
   }
   &:after {
     position: absolute;
-    border: .5rem solid black;
+    border: .5rem solid $line-color;
     content: '';
     top: -8rem;
     left: -8rem;
@@ -98,18 +104,21 @@ html {
 .s-4 {
   position: absolute;
   top: 11rem;
-  border: .5rem solid black;
+  border: .5rem solid $line-color;
   width: 69.5rem;
   height: 69.5rem;
 
   &:before {
     position: absolute;
-    border: .6rem solid black;
+    background-color: $tunnel-color;
+    border: 2rem solid $line-color;
     content: '';
-    top: -5rem;
-    left: -5.1rem;
+    top: -6.4rem;
+    left: -6.5rem;
     width: 78.5rem;
     height: 78.5rem;
+    z-index: -1;
+    box-shadow: 0 .25rem .5rem 1rem rgb(0, 0, 0);
   }
 }
 
@@ -126,8 +135,8 @@ html {
 .b-s-1 {
   position: absolute;
   top: -3.8rem;
-  border-left: .2rem solid black;
-  border-right: .2rem solid black;
+  border-left: .2rem solid $line-color;
+  border-right: .2rem solid $line-color;
   width: 10rem;
   height: 15.5rem;
   transform: perspective(5rem) rotateX(30.5deg);
@@ -137,8 +146,8 @@ html {
     position: absolute;
     top: -3.2rem;
     left: 3.7rem;
-    border-left: .15rem solid black;
-    border-right: .15rem solid black;
+    border-left: .15rem solid $line-color;
+    border-right: .15rem solid $line-color;
     width: 2rem;
     height: 15rem;
     transform: perspective(5.5rem) rotateX(15deg);
@@ -149,11 +158,11 @@ html {
     position: absolute;
     top: -2.9rem;
     left: -2.85rem;
-    border-left: .2rem solid black;
-    border-right: .2rem solid black;
+    border-left: .2rem solid $line-color;
+    border-right: .2rem solid $line-color;
     width: 15.2rem;
     height: 17.7rem;
-    transform: perspective(8rem) rotateX(4deg);
+    transform: perspective(8.1rem) rotateX(4deg);
   }
 }
 
@@ -170,8 +179,8 @@ html {
 .t-s-1 {
   position: absolute;
   top: 24.25rem;
-  border-left: .2rem solid black;
-  border-right: .2rem solid black;
+  border-left: .2rem solid $line-color;
+  border-right: .2rem solid $line-color;
   width: 10rem;
   height: 15.65rem;
   transform: perspective(5rem) rotateX(-30.5deg);
@@ -181,8 +190,8 @@ html {
     position: absolute;
     top: 2.25rem;
     left: 3.7rem;
-    border-left: .15rem solid black;
-    border-right: .15rem solid black;
+    border-left: .15rem solid $line-color;
+    border-right: .15rem solid $line-color;
     width: 2rem;
     height: 12.5rem;
     transform: perspective(5.5rem) rotateX(-15deg);
@@ -192,11 +201,79 @@ html {
     content: '';
     position: absolute;
     top: 1.25rem;
-    left: -2.3rem;
-    border-left: .2rem solid black;
-    border-right: .2rem solid black;
-    width: 14.2rem;
-    height: 20.75rem;
-    transform: perspective(8rem) rotateX(-5deg);
+    left: -2.2rem;
+    border-left: .2rem solid $line-color;
+    border-right: .2rem solid $line-color;
+    width: 14rem;
+    height: 18.3rem;
+    transform: perspective(8.1rem) rotateX(-6.5deg);
   }
+}
+
+// Left Horizantal Grid Lines
+.left-wrapper {
+  position: absolute;
+  top: 7.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 78rem;
+  height: 78rem;
+}
+.l-s-1 {
+  position: absolute;
+  top: 38.5rem;
+  left: 27rem;
+  border-top: .1rem solid $line-color;
+  border-bottom: .1rem solid $line-color;
+  width: 11.6rem;
+  height: 1.65rem;
+  transform: perspective(5rem) rotateY(50deg);
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: -1.8rem;
+    left: 0.2rem;
+    border-top: .1rem solid $line-color;
+    border-bottom: .1rem solid $line-color;
+    width: 23rem;
+    height: 5.25rem;
+    transform: perspective(50rem) rotateY(5deg);
+  }
+}
+
+// Right Horizantal Grid Lines
+.right-wrapper {
+  position: absolute;
+  top: 7.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 78rem;
+  height: 78rem;
+}
+.r-s-1 {
+  position: absolute;
+  top: 38.6rem;
+  right: 28.75rem;
+  border-top: .1rem solid $line-color;
+  border-bottom: .1rem solid $line-color;
+  width: 8.6rem;
+  height: 1.8rem;
+  transform: perspective(1rem) rotateY(-11.75deg);
+
+  
+  &:after {
+    content: '';
+    position: absolute;
+    top: -1.6rem;
+    left: .2rem;
+    border-top: .1rem solid $line-color;
+    border-bottom: .1rem solid $line-color;
+    width: 8em;
+    height: 5rem;
+    transform: perspective(9.6rem) rotateY(-27.5deg);
+  }
+
 }
