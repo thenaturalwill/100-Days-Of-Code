@@ -2,13 +2,14 @@ html {
   display: -ms-grid;
   display: grid;
   place-content: center;
-  background-color: antiquewhite;
+  background-color: rgba(196, 75, 200, 0.966);
   font-size: 10px;
   width: 100%;
   height: 100%;
 }
 
 .tunnle-wrapper {
+  background-color: rgba(79, 243, 229, 0.904);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -18,8 +19,8 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 75rem;
-  height: 75rem;
+  width: 79rem;
+  height: 79rem;
 }
 
 .s-1 {
@@ -120,10 +121,10 @@ html {
   position: absolute;
   border: .6rem solid black;
   content: '';
-  top: -4.5rem;
-  left: -4.5rem;
-  width: 78rem;
-  height: 78rem;
+  top: -5rem;
+  left: -5.1rem;
+  width: 78.5rem;
+  height: 78.5rem;
 }
 
 .bottom-wrapper {
@@ -144,25 +145,91 @@ html {
 
 .b-s-1 {
   position: absolute;
-  top: -3.5rem;
+  top: -3.8rem;
   border-left: .2rem solid black;
   border-right: .2rem solid black;
-  width: 13.5rem;
-  height: 16rem;
-  -webkit-transform: perspective(2.5rem) rotateX(13.5deg);
-          transform: perspective(2.5rem) rotateX(13.5deg);
+  width: 10rem;
+  height: 15.5rem;
+  -webkit-transform: perspective(5rem) rotateX(30.5deg);
+          transform: perspective(5rem) rotateX(30.5deg);
+}
+
+.b-s-1:before {
+  content: '';
+  position: absolute;
+  top: -3.2rem;
+  left: 3.7rem;
+  border-left: .15rem solid black;
+  border-right: .15rem solid black;
+  width: 2rem;
+  height: 15rem;
+  -webkit-transform: perspective(5.5rem) rotateX(15deg);
+          transform: perspective(5.5rem) rotateX(15deg);
 }
 
 .b-s-1:after {
   content: '';
   position: absolute;
-  top: -3.5rem;
-  left: -1rem;
+  top: -2.9rem;
+  left: -2.85rem;
   border-left: .2rem solid black;
   border-right: .2rem solid black;
-  width: 15.3rem;
-  height: 17.1rem;
-  -webkit-transform: perspective(4.5rem) rotateX(6.75deg);
-          transform: perspective(4.5rem) rotateX(6.75deg);
+  width: 15.2rem;
+  height: 17.7rem;
+  -webkit-transform: perspective(8rem) rotateX(4deg);
+          transform: perspective(8rem) rotateX(4deg);
+}
+
+.top-wrapper {
+  position: absolute;
+  top: 7.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 78rem;
+  height: 35rem;
+}
+
+.t-s-1 {
+  position: absolute;
+  top: 24.25rem;
+  border-left: .2rem solid black;
+  border-right: .2rem solid black;
+  width: 10rem;
+  height: 15.65rem;
+  -webkit-transform: perspective(5rem) rotateX(-30.5deg);
+          transform: perspective(5rem) rotateX(-30.5deg);
+}
+
+.t-s-1:before {
+  content: '';
+  position: absolute;
+  top: 2.25rem;
+  left: 3.7rem;
+  border-left: .15rem solid black;
+  border-right: .15rem solid black;
+  width: 2rem;
+  height: 12.5rem;
+  -webkit-transform: perspective(5.5rem) rotateX(-15deg);
+          transform: perspective(5.5rem) rotateX(-15deg);
+}
+
+.t-s-1:after {
+  content: '';
+  position: absolute;
+  top: 1.25rem;
+  left: -2.3rem;
+  border-left: .2rem solid black;
+  border-right: .2rem solid black;
+  width: 14.2rem;
+  height: 20.75rem;
+  -webkit-transform: perspective(8rem) rotateX(-5deg);
+          transform: perspective(8rem) rotateX(-5deg);
 }
 /*# sourceMappingURL=infinity-wall.css.map */
